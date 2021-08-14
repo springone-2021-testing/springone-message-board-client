@@ -17,10 +17,11 @@ public class SpringoneApplicationTests {
 
 	@Autowired
 	private MessageBoardClient client;
+	private Result result;
 
 	@Test
 	void clientShouldAddMessageToBoard() {
-		var result = this.client.addMessage("Cora","Welcome to everyone!");
+		Result result = this.client.addMessage("Cora","Welcome to everyone!");
 		Assertions.assertEquals(result.getParameter(), "1");
 		Assertions.assertEquals(result.getOperation(), "Create");
 		Assertions.assertEquals(result.getStatus(), "Success");

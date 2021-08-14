@@ -27,10 +27,6 @@ public class MessageBoardClient {
     public Result addMessage(String user, String text) {
 //        throw new UnsupportedOperationException("Not yet implemented");
 
-//        return this.restTemplate.getForObject("http://" + this.hostname +
-//                ":" + this.port + "/cats/{name}", Cat.class, name);
-
-
         HttpEntity<CreateMessage> request = new HttpEntity<>(new CreateMessage(user,text));
         return restTemplate.postForObject("http://" + this.hostname +
                 ":" + this.port + "/message", request, Result.class);
