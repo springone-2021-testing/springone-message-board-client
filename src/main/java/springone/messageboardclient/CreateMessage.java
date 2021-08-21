@@ -1,4 +1,4 @@
-package com.example.message.board.springone;
+package springone.messageboardclient;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CreateMessage {
 
-    private  String username;
-    private  String text;
+    private String username;
+    private String text;
 
 }
