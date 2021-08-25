@@ -11,7 +11,7 @@ import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties
 
 import java.util.List;
 
-@AutoConfigureStubRunner(ids = "springone:message-board-client-contracts",
+@AutoConfigureStubRunner(ids = "springone:message-board-contracts",
         stubsMode = StubRunnerProperties.StubsMode.LOCAL)
 @SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.NONE)
 public class ClientServiceContractTests {
@@ -24,7 +24,7 @@ public class ClientServiceContractTests {
 
     @BeforeEach
     public void setup() {
-        this.service.setBaseUrl("http://localhost:" + stubFinder.findStubUrl("message-board-client-contracts").getPort());
+        this.service.setBaseUrl("http://localhost:" + stubFinder.findStubUrl("message-board-contracts").getPort());
     }
 
     @Test
