@@ -36,6 +36,14 @@ public class ClientServiceContractTests {
     }
 
     @Test
+    void shouldNotAddMessage() {
+        Result result = this.service.addMessage("andy","I am here too!");
+        Assertions.assertEquals(result.getParameter(), "0");
+        Assertions.assertEquals(result.getOperation(), "Create");
+        Assertions.assertEquals(result.getStatus(), "Failure: Name format must be First_Last");
+    }
+
+    @Test
     void shouldGetMessages() {
         List<Message> messageList = this.service.getMessages();
         Assertions.assertEquals(messageList.get(0).getId(), 1);
