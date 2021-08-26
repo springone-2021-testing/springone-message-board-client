@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CreateMessage {
 
-    private String username;
+    private String firstname;
+    private String lastname;
     private String text;
 
 }

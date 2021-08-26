@@ -10,7 +10,8 @@ import lombok.NoArgsConstructor;
 public class Message {
 
     private int id;
-    private String username;
+    private String firstname;
+    private String lastname;
     private String text;
 
 }

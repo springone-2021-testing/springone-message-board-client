@@ -22,11 +22,11 @@ public class ClientService {
         this.restTemplate = restTemplate;
     }
 
-    Result addMessage(String user, String text) {
+    Result addMessage(String firstname, String lastname, String text) {
 
         HttpHeaders headers = new HttpHeaders();
         headers.set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
-        HttpEntity<CreateMessage> request = new HttpEntity<CreateMessage>(new CreateMessage(user,text), headers);
+        HttpEntity<CreateMessage> request = new HttpEntity<CreateMessage>(new CreateMessage(firstname, lastname, text), headers);
         return restTemplate.postForObject(baseUrl + "/message", request, Result.class);
 
     }
