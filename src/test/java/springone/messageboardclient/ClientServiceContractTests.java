@@ -11,8 +11,8 @@ import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties
 
 import java.util.List;
 
-@AutoConfigureStubRunner(ids = "springone:message-board-contracts:1.0.0-B",
-        stubsMode = StubRunnerProperties.StubsMode.LOCAL)
+@AutoConfigureStubRunner(stubsMode = StubRunnerProperties.StubsMode.LOCAL,
+        ids = "springone:message-board-contracts:1.0.0")
 @SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.NONE)
 public class ClientServiceContractTests {
 
